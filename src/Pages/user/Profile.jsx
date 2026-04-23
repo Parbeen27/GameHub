@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Bounce, toast } from "react-toastify"
 import { useAuth } from "../../Context/AuthContext"
+import {api} from "../../services/api"
 export default function ProfilePage() {
   const [username, setUsername] = useState(null);
   const [newUsername, setNewUsername] = useState("");
