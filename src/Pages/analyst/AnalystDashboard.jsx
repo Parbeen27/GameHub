@@ -4,6 +4,7 @@ import StatCards from "../../Components/analytics/StatCards";
 import UserGrowthChart from "../../Components/analytics/UserGrowthChart";
 import GameStatsTable from "../../Components/analytics/GameStatsTable";
 import PeakHoursChart from "../../Components/analytics/PeakHoursChart";
+import api from "../../services/api"
 
 export default function AnalystDashboard() {
   const [data, setData] = useState(null);
@@ -12,7 +13,7 @@ export default function AnalystDashboard() {
 
   const fetchData = async () => {
     
-    const res = await axios.get("/api/analyst/dashboard", {
+    const res = await api.get("/api/analyst/dashboard", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
