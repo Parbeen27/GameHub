@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import GameForm from '../../Components/admin/Games/GameForm'
 import GameList from '../../Components/admin/Games/GameList'
 import axios from 'axios'
-
+import api from "../../services/api"
 export default function Games() {
     const [games, setGames] = useState([])
     const token = localStorage.getItem("accessToken")
     const fetchGames = async () => {
-        const res = await axios("/api/admin/games",{
+        const res = await api.get("/api/admin/games",{
             headers: {
                 Authorization: `Bearer ${token}`
             },withCredentials: true
