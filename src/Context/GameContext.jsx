@@ -5,7 +5,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { createContext } from 'react'
-import {api} from "../services/api"
+import api from "../services/api"
 
 export const GamesContext = createContext()
 
