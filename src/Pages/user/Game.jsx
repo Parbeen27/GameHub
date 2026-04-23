@@ -28,9 +28,7 @@ function Game() {
       hasCountedPlay = true
     
     try {
-      await fetch(`/api/games/${gameData.slug}/play`,{
-        method: "post",
-      })
+      await api.post(`/api/games/${gameData.slug}/play`)
     } catch (err) {
       console.error("failed to increment play: ", err);
       
