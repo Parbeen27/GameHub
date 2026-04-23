@@ -2,7 +2,7 @@ import { useEffect, useState, useContext, useRef } from "react";
 import axios from "axios";
 import { GamesContext } from "../../Context/GameContext";
 import { useAuth } from "../../Context/AuthContext";
-import API from "../../services/api"
+import api from "../../services/api"
 export default function AnalystLeaderboard() {
   const { games } = useContext(GamesContext);
   const { user } = useAuth()
@@ -19,7 +19,7 @@ export default function AnalystLeaderboard() {
         ? `/api/games/score/leaderboard/${gameId}`
         : "/api/games/score/global-leaderboard";
       
-      const res = await axios.get(url);
+      const res = await api.get(url);
       setScores(res.data);
       
     } catch (err) {
