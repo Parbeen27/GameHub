@@ -5,7 +5,7 @@ import GamesChart from "../../Components/admin/Dashboard/GameChart";
 import { GamesPie } from "../../Components/admin/Dashboard/GamesPie";
 import StatsCards from "../../Components/admin/Dashboard/StatsCards"
 import Activitylog from "../../Components/admin/Dashboard/Activitylog";
-
+import api from "../../services/api"
 export default function Dashboard() {
   const [chartData, setChartData] = useState([]);
   const [stats, setStats] = useState({});
@@ -13,7 +13,7 @@ export default function Dashboard() {
   const token = localStorage.getItem("accessToken")
   const fetchGames = async() => {
     try {
-      const res = await axios.get("/api/admin/stats/games",{
+      const res = await api.get("/api/admin/stats/games",{
             headers: { Authorization: `Bearer ${token}`},
             withCredentials: true
         })
@@ -26,7 +26,7 @@ export default function Dashboard() {
   }
   const fetchUsersStats = async () => {
     try {
-      const res = await axios.get("/api/admin/stats/users",{
+      const res = await api.get("/api/admin/stats/users",{
             headers: { Authorization: `Bearer ${token}`},
             withCredentials: true
         })
@@ -40,7 +40,7 @@ export default function Dashboard() {
 
   const fecthLogs = async () => {
     try {
-      const res = await axios.get("/api/admin",{
+      const res = await api.get("/api/admin",{
       headers: {
         Authorization: `Bearer ${token}`},
         withCredentials: true
