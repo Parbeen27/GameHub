@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
-
+import api from "../../services/api"
 export default function AnalystUsers() {
   const [growth, setGrowth] = useState([]);
   const token = localStorage.getItem("accessToken");
 
   useEffect(() => {
-    axios.get("/api/analyst/users/growth", {
+    api.get("/api/analyst/users/growth", {
       headers: { Authorization: `Bearer ${token}` }
     }).then(res => setGrowth(res.data.data));
   }, []);
