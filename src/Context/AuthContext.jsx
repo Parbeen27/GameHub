@@ -6,6 +6,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
+ 
     const [user, setUser] = useState([])
     const [loading, setLoading] = useState(true)
     const [dark, setDark] = useState(false)
@@ -17,7 +18,7 @@ export const AuthProvider = ({ children }) => {
             setLoading(false)
             return;
         }
-        axios.get("/api/user/me",{
+        api.get("/api/user/me",{
             headers: { Authorization: `Bearer ${token}`},
             withCredentials: true
         }).then((res) => {
