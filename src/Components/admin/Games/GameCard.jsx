@@ -1,10 +1,10 @@
 import axios from "axios";
-
+import api from "../../../services/api";
 export default function GameCard({ game, refresh }) {
   const token = localStorage.getItem("accessToken");
 
   const handleToggle = async () => {
-    await axios.patch(`/api/admin/games/${game._id}/toggle`,{},{
+    await api.patch(`/api/admin/games/${game._id}/toggle`,{},{
         headers: {
             Authorization: `Bearer ${token}`
         },
