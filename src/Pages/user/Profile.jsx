@@ -19,7 +19,7 @@ export default function ProfilePage() {
   const handleUsernameUpdate = async () => {
     setLoading(true);
     try {
-      const res = await axios.put(
+      const res = await api.put(
         "/api/user/update/username",
         { username: newUsername },
         {
@@ -49,7 +49,7 @@ export default function ProfilePage() {
   const handlePasswordUpdate = async () => {
     setLoading(true);
     try {
-      await axios.put(
+      await api.put(
         "/api/user/update/password",
         passwordData,
         {
@@ -77,7 +77,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("/api/user/me", 
+        const res = await api.get("/api/user/me", 
         {
           headers: { Authorization: `Bearer ${token}` },
         })
