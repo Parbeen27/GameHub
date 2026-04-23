@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import api from "../../services/api";
 
 export default function UserGrowthChart() {
   const [data, setData] = useState([]);
@@ -8,7 +9,7 @@ export default function UserGrowthChart() {
   const token = localStorage.getItem("accessToken");
 
   useEffect(() => {
-    axios.get("/api/analyst/users/growth", {
+    api.get("/api/analyst/users/growth", {
       headers: { Authorization: `Bearer ${token}` },
     }).then(res => setData(res.data.data));
   }, []);
