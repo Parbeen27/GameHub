@@ -9,7 +9,7 @@ export default function LeaderboardPreview() {
     useEffect(() => {
         const fetchGames = async () => {
         try {
-        const res = await axios.get("/api/games/score/global-leaderboard")
+        const res = await api.get("/api/games/score/global-leaderboard")
         setLeaders(res.data)
       } catch (err) {
         console.log((err));
