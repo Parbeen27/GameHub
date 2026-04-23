@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { GamesContext } from '../../Context/GameContext';
 import Platfromrunner from '../../Games/scenes/Platfromrunner';
 import SpaceBattle from '../../Games/scenes/SpaceBattle/index'
-import {api} from "../../services/api"
+import api from "../../services/api"
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 function Game() {
   const {id} = useParams()
