@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import api from "../../services/api";
 export default function GameStatsTable() {
   const [data, setData] = useState([]);
 
   const token = localStorage.getItem("accessToken");
 
   useEffect(() => {
-    axios.get("/api/analyst/games", {
+    api.get("/api/analyst/games", {
       headers: { Authorization: `Bearer ${token}` },
     }).then(res => setData(res.data.data));
   }, []);
