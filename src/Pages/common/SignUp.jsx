@@ -20,11 +20,11 @@ function SignUp() {
         e.preventDefault()
 
         try {
-            const res = await axios.post(
+            const res = await api.post(
                 "/api/auth/register",
                 form
             )
-            console.log(res.data);
+            
             toast.success("User Registered",{
                 position: "top-right",
                 autoClose: 2000,
