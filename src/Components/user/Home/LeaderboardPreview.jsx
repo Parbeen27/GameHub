@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import {api} from "../../../services/api"
 
 export default function LeaderboardPreview() {
     const [leaders, setLeaders] = useState([])
