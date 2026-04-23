@@ -24,7 +24,7 @@ export default function LeaderboardPage() {
         ? `/api/games/score/leaderboard/${gameId}`
         : "/api/games/score/global-leaderboard";
       
-      const res = await axios.get(url);
+      const res = await api.get(url);
       setScores(res.data);
     } catch (err) {
       console.log(err);
@@ -36,7 +36,7 @@ export default function LeaderboardPage() {
       ? `/api/games/score/my-rank/${gameId}`
       : "/api/games/score/my-rank";
       
-      const res = await axios.get(url,{
+      const res = await api.get(url,{
         headers: {
           Authorization: `Bearer ${token}`
         },withCredentials: true
