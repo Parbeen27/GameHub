@@ -14,7 +14,7 @@ export default function GameContext({ children }) {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const res = await axios.get("/api/games")
+        const res = await api.get("/api/games")
         setGames(res.data)
       } catch (err) {
         console.log((err));
