@@ -10,7 +10,7 @@ export default function ProfileStats() {
   
 
   const fetchdata = async() => {
-    const res = await axios.get(`/api/games/score/user/${userId}`)
+    const res = await api.get(`/api/games/score/user/${userId}`)
     setData(res.data)
   }
   useEffect(() => {
