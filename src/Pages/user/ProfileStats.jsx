@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '../../Context/AuthContext'
 import Charts from '../../Components/user/ProfileStats/Charts';
+import {api} from "../../services/api"
 
 export default function ProfileStats() {
   const [data, setData] = useState(null);
