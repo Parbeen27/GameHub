@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Bounce, toast } from 'react-toastify'
 import axios from 'axios'
-import {api} from "../../services/api"
+import api from "../../services/api"
 function SignUp() {
     const [form, setform] = useState({
         username: '',
