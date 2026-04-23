@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import api from "../../services/api";
 
 export default function PeakHoursChart() {
   const [data, setData] = useState([]);
@@ -8,7 +9,7 @@ export default function PeakHoursChart() {
   const token = localStorage.getItem("accessToken");
 
   useEffect(() => {
-    axios.get("/api/analyst/games/peaktime", {
+    api.get("/api/analyst/games/peaktime", {
       headers: { Authorization: `Bearer ${token}` },
     }).then(res => setData(res.data.data));
   }, []);
