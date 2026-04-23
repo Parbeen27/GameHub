@@ -3,7 +3,7 @@ import axios from "axios";
 import { GamesContext } from "../../Context/GameContext";
 import Podium from "../../Components/user/leaderboard/Podium";
 import { useAuth } from "../../Context/AuthContext";
-import API from "../../services/api"
+import {api} from "../../services/api"
 export default function LeaderboardPage() {
   const { games } = useContext(GamesContext);
   const [myRank,setMyRank] = useState(null)
