@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import api from "../../services/api"
 export default function AnalystGames() {
   const [games, setGames] = useState([]);
   const token = localStorage.getItem("accessToken");
 
   useEffect(() => {
-    axios.get("/api/analyst/games", {
+    api.get("/api/analyst/games", {
       headers: { Authorization: `Bearer ${token}` }
     }).then(res => setGames(res.data.data));
   }, []);
