@@ -1,0 +1,65 @@
+{
+    "files":[
+        {
+            "type" : "atlas",
+            "key"  : "player",
+            "textureURL" : "PlatformGame/player_run.png",
+            "atlasURL" : "PlatformGame/player_run.json"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "enemy",
+            "textureURL" : "PlatformGame/enemy.png",
+            "atlasURL" : "PlatformGame/enemy.json"
+        },
+        {
+            "type" : "image",
+            "key"  : "platform",
+            "url"  : "PlatformGame/platform.png"
+        },
+        {
+            "type" : "image",
+            "key"  : "coin",
+            "url"  : "PlatformGame/coin.png" 
+        },
+        {
+            "type" : "image",
+            "key"  : "bullet",
+            "url"  : "PlatformGame/bullet.png"
+        },
+        {
+            "type" : "image",
+            "key"  : "up",
+            "url"  : "PlatformGame/jump.png"
+        },
+        {
+            "type" : "image",
+            "key"  : "shoot",
+            "url"  : "PlatformGame/shoot.png"
+        },
+        {
+            "type" : "audio",
+            "key"  : "jump",
+            "url"  : "PlatformGame/jump.wav"
+        },
+        {
+            "type" : "audio",
+            "key"  : "coinSound",
+            "url"  : "PlatformGame/coin.wav"
+        },
+        {
+            "type" : "audio",
+            "key"  : "hitSound",
+            "url"  : "PlatformGame/hit.mp3"
+        },
+        {
+            "type" : "audio",
+            "key"  : "gameOverSound",
+            "url"  : "PlatformGame/gameover.wav"
+        }
+
+
+
+
+    ]
+}

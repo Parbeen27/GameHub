@@ -1,0 +1,73 @@
+{
+    "files" : [
+        {
+            "key" : "background",
+            "type": "image",
+            "url" : "SpaceBattle/background.jpg"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "player1",
+            "textureURL"  : "SpaceBattle/player.png",
+            "atlasURL" : "SpaceBattle/player.json"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "player_bullet",
+            "textureURL"  : "SpaceBattle/player_bullet.png",
+            "atlasURL" : "SpaceBattle/player_bullet.json"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "enemy1",
+            "textureURL"  : "SpaceBattle/enemy.png",
+            "atlasURL" : "SpaceBattle/enemy.json"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "enemy2",
+            "textureURL"  : "SpaceBattle/enemy2.png",
+            "atlasURL" : "SpaceBattle/enemy2.json"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "boss1",
+            "textureURL"  : "SpaceBattle/boss.png",
+            "atlasURL" : "SpaceBattle/boss.json"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "explosion",
+            "textureURL"  : "SpaceBattle/explosion.png",
+            "atlasURL" : "SpaceBattle/explosion.json"
+        },
+        {
+            "type" : "atlas",
+            "key"  : "enemy_bullet",
+            "textureURL"  : "SpaceBattle/enemy_bullet.png",
+            "atlasURL" : "SpaceBattle/enemy_bullet.json"
+        },
+        {
+            "key" : "BossTheme",
+            "type": "audio",
+            "url" : "SpaceBattle/BossTheme.mp3"
+        },
+        {
+            "key" : "shield",
+            "type": "atlas",
+            "textureURL"  : "SpaceBattle/powerup.png",
+            "atlasURL" : "SpaceBattle/powerup.json"
+        },
+        {
+            "key" : "ammo",
+            "type": "atlas",
+            "textureURL"  : "SpaceBattle/bulletpickup.png",
+            "atlasURL" : "SpaceBattle/bulletpickup.json"
+        },
+        {
+            "type" : "image",
+            "key"  : "shoot",
+            "url"  : "PlatformGame/shoot.png"
+        }
+    ]
+}
