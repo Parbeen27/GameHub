@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bounce, toast } from "react-toastify";
-
+import api from "../../../services/api";
 export default function GameForm({ onSuccess }) {
   const [form, setForm] = useState({
     name: "",
@@ -43,7 +43,7 @@ export default function GameForm({ onSuccess }) {
     formData.append("scenekey", form.scenekey);
     formData.append("thumbnail", file);
     
-    const res = await axios.post("/api/admin/create/games",formData,{
+    const res = await api.post("/api/admin/create/games",formData,{
         headers:{
             Authorization: `Bearer ${token}`,
             "Content-Type": "multipart/form-data",
