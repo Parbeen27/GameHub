@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { toast } from "react-toastify"
 import { Ban, Trash2 } from "lucide-react"
-import api from "../../../services/api";
+import api from "../../services/api";
 export default function UsersTable() {
     const [users, setUsers] = useState([])
     const [search, setSearch] = useState('')
