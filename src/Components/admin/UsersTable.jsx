@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { toast } from "react-toastify"
 import { Ban, Trash2 } from "lucide-react"
+import api from "../../../services/api";
 export default function UsersTable() {
     const [users, setUsers] = useState([])
     const [search, setSearch] = useState('')
@@ -13,7 +14,7 @@ export default function UsersTable() {
     const fetchUsers = async () => {
         setLoading(true)
         try {
-            const res = await axios.get("/api/admin/users",{
+            const res = await api.get("/api/admin/users",{
                 headers: { Authorization: `Bearer ${token}` },
             })
             setUsers(res.data)
@@ -40,7 +41,7 @@ export default function UsersTable() {
     // Block / Unblock
     const toggleBlock = async (id,isBlocked) => {
         try {
-            await axios.patch(`/api/admin/users/block/${id}`,{},{
+            await api.patch(`/api/admin/users/block/${id}`,{},{
                 headers: { Authorization: `Bearer ${token}`},
             })
 
@@ -61,7 +62,7 @@ export default function UsersTable() {
         if(!window.confirm("Delete this user?")) return;
 
         try {
-            await axios.patch(`/api/admin/users/delete/${id}`,{},{
+            await api.patch(`/api/admin/users/delete/${id}`,{},{
                 headers: { Authorization: `Bearer ${token}` },
             })
             toast.success("User deleted")
@@ -74,7 +75,7 @@ export default function UsersTable() {
     }
     const updateUserRole = async(id,newRole) => {
         try {
-            await axios.patch(`/api/admin/users/role/${id}`, {
+            await api.patch(`/api/admin/users/role/${id}`, {
             role: newRole
         }, {
                 headers: {
