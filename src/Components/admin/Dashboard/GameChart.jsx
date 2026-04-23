@@ -2,7 +2,8 @@ import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer
 } from "recharts";
 import { useEffect, useState } from "react";
-import axios from "axios";
+
+
 
 export default function GamesChart({ data }) {
 
