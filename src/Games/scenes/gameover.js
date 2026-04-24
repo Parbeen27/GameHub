@@ -53,8 +53,8 @@ export default class GameOverScene extends Phaser.Scene {
     "Content-Type": "application/json",
     Authorization: `Bearer ${token}`
   }
+        
 });
-        });
 
         submitBtn.setText("✔ Submitted");
       } catch (err) {
