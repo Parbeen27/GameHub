@@ -1,5 +1,5 @@
 import * as Phaser from "phaser";
-
+import api from "../../services/api"
 export default class WinScene extends Phaser.Scene {
   constructor() {
     super("winScene");
@@ -45,17 +45,15 @@ export default class WinScene extends Phaser.Scene {
       try {
         const token = localStorage.getItem("accessToken");
 
-        await fetch("/api/games/score", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`
-          },
-          body: JSON.stringify({
-            gameId: this.gameId,
-            score: this.score
-          })
-        });
+        await api.post("/api/games/score", {
+  gameId: this.gameId,
+  score: this.score
+}, {
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${token}`
+  }
+});
 
         submitBtn.setText("✔ Submitted");
       } catch (err) {
