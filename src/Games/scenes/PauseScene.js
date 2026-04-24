@@ -1,4 +1,5 @@
 import * as Phaser from "phaser"
+import api from "../../services/api"
 export default class PauseScene extends Phaser.Scene{
     constructor(){
         super("PauseScene")
@@ -55,17 +56,15 @@ export default class PauseScene extends Phaser.Scene{
             try {
               const token = localStorage.getItem("accessToken");
           
-              await fetch("/api/games/score", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${token}`
-                },
-                body: JSON.stringify({
-                  gameId: this.gameId,
-                  score: this.score
-                })
-              });
+              await api.post("/api/games/score", {
+                     gameId: this.gameId,
+                     score: this.score
+             }, {
+                  headers: {
+                     "Content-Type": "application/json",
+                      Authorization: `Bearer ${token}`
+  }
+});
           
               this.submitText.setText("✔ Submitted");
             } catch (err) {
