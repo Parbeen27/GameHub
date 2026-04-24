@@ -70,6 +70,7 @@ function Navbar() {
 
           <Link to='/'>Home</Link>
           <Link to='/leaderboard'>LeaderBoard</Link>
+          <Link to='/user/profilestats' onClick={() => setisOpen(false)}>Stats</Link>
           <Link to='/about'>About</Link>
           <Link to='/user/profile'><CircleUserRound/></Link>
           <button onClick={() => {
