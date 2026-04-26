@@ -2,14 +2,6 @@
 
 ## BCA Final Year Project Report
 
-**Submitted by:** [Student Name]  
-**Roll No:** [Roll Number]  
-**Course:** Bachelor of Computer Applications (BCA)  
-**Semester:** Final Year  
-**Academic Year:** [Year]  
-**Guide:** [Faculty Name]  
-
----
 
 ## Table of Contents
 
@@ -1345,6 +1337,11 @@ This chapter presents the visual results, interface screenshots, and deployment 
 - Recent activity summary
 - Global leaderboard preview
 - Navigation to other sections
+<img width="1340" height="625" alt="image" src="https://github.com/user-attachments/assets/2ffa2c93-65ed-4e1f-8690-f691a5c57473" />
+-Mobile
+<img width="303" height="538" alt="image" src="https://github.com/user-attachments/assets/9b8bc680-0f2a-4f80-a6e6-b524e4ee5885" />
+
+
 
 **Game Selection:**
 - Game cards with thumbnails
@@ -1365,6 +1362,8 @@ This chapter presents the visual results, interface screenshots, and deployment 
 - Enemies with AI behavior
 - Score accumulation
 - Level progression
+<img width="1343" height="639" alt="image" src="https://github.com/user-attachments/assets/3a5d5d77-c6d0-4c8f-80b0-7b7538a3c6fc" />
+
 
 **Space Battle Game:**
 - Player spaceship
@@ -1373,6 +1372,8 @@ This chapter presents the visual results, interface screenshots, and deployment 
 - Power-up items
 - Boss encounter
 - Score multipliers
+<img width="1342" height="636" alt="image" src="https://github.com/user-attachments/assets/cf31673a-ffce-484e-9d9f-d8a729af9d6e" />
+
 
 **Leaderboard Page:**
 - Global rankings with player names and scores
@@ -1380,17 +1381,27 @@ This chapter presents the visual results, interface screenshots, and deployment 
 - Time period selector (all-time, monthly, weekly)
 - User's rank highlighted
 - Score comparison
+<img width="1348" height="639" alt="image" src="https://github.com/user-attachments/assets/88dd7911-b6e0-4e64-9401-42d22258332b" />
+
 
 **User Profile:**
-- Profile picture (uploaded via Cloudinary)
 - User statistics (games played, total score, rank)
+<img width="1332" height="635" alt="image" src="https://github.com/user-attachments/assets/b3eb9091-cab7-4b0d-92a1-085779a9ab63" />
+<img width="1330" height="631" alt="image" src="https://github.com/user-attachments/assets/46c924ad-c8b9-4ce5-acbb-f5094ed69310" />
+
+
 - Game history with scores and dates
 - Edit profile option
 - Change password option
+<img width="1346" height="648" alt="image" src="https://github.com/user-attachments/assets/aa8c7225-2411-4f43-abc3-29b39e5ba10f" />
 
 #### 7.2.3 Admin Dashboard
+<img width="1341" height="639" alt="image" src="https://github.com/user-attachments/assets/1ec6ceff-c6bf-4003-af52-b96848129672" />
+
 
 **Users Management:**
+<img width="1332" height="634" alt="image" src="https://github.com/user-attachments/assets/6842d64b-d943-4d10-8c36-7b63aa4750a9" />
+
 - Table of all users with sorting/filtering
 - Columns: Username, Email, Role, Last Login, Status
 - Edit/Delete buttons
@@ -1398,11 +1409,14 @@ This chapter presents the visual results, interface screenshots, and deployment 
 - Search functionality
 
 **Activity Logs:**
+<img width="1338" height="636" alt="image" src="https://github.com/user-attachments/assets/65a49a44-33d0-4547-acd6-9e198deebb58" />
+
 - Timeline of user actions
 - Filter by user, date, action type
 - Detailed log entries with timestamps
 - IP address and user agent info
 - Export logs option
+  
 
 **System Statistics:**
 - Total registered users
@@ -1412,6 +1426,8 @@ This chapter presents the visual results, interface screenshots, and deployment 
 - System uptime
 
 #### 7.2.4 Analyst Dashboard
+<img width="1335" height="638" alt="image" src="https://github.com/user-attachments/assets/c62663ee-8089-4b09-a4bd-c23c4f85a89d" />
+
 
 **Peak Hours Chart:**
 - Line/bar chart showing user activity by hour
@@ -1514,29 +1530,10 @@ Frontend:
 - More game variety (planned for Phase 2)
 - Social features (multiplayer planned)
 
-### 7.7 Performance Validation
-
-**Production Environment Metrics:**
-
-| Metric | Target | Achieved | Status |
-|--------|--------|----------|--------|
-| API Response Time (p95) | <150ms | 120ms | ✓ PASS |
-| Uptime | 99.5% | 99.6% | ✓ PASS |
-| Concurrent Users | 100 | 120 | ✓ PASS |
-| Error Rate | <0.5% | 0.2% | ✓ PASS |
-| Page Load Time | <2s | 1.8s | ✓ PASS |
 
 ### 7.8 Live Deployment Information
 
-**Deployment URL:** [Production URL]  
-**API Base URL:** https://api.gamehub.example.com  
-**Frontend URL:** https://gamehub.example.com  
-
-**Monitoring & Analytics:**
-- Real-time error tracking (Sentry)
-- Performance monitoring (DataDog)
-- User analytics (Google Analytics)
-- Uptime monitoring (StatusPage)
+**Deployment URL:** https://game-hub-navy-zeta.vercel.app/
 
 ---
 
@@ -1609,6 +1606,5 @@ This project establishes a scalable base, ready for enterprise evolution.
 
 ---
 
-*Report Complete. Total ~100 pages formatted.*
 
 
